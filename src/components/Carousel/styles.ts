@@ -2,6 +2,7 @@ import styled, { css } from 'styled-components';
 
 type ImageProps = {
   isFocused?: boolean;
+  position?: number;
 };
 
 export const Container = styled.div`
@@ -33,11 +34,12 @@ export const ImageButton = styled.button<ImageProps>`
 
   transition: all 0.2s ease-in-out;
 
-  ${({ isFocused }) =>
+  ${({ isFocused, position }) =>
     isFocused
       ? css`
           width: 800px;
           height: 370px;
+          transform: translateX(${position ?? 0}px);
         `
       : css`
           width: 500px;

@@ -30,6 +30,7 @@ export function Carousel({ imgs }: Props) {
         {imgs.map((img, index) => (
           <S.ImageButton
             key={index}
+            position={index}
             isFocused={index === focused}
             onClick={() => handleChange(index)}
           >
