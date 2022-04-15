@@ -21,16 +21,14 @@ export function Carousel({ imgs }: Props) {
     return () => clearInterval(interval);
   }, [focused]);
 
-  //? do scroll based in https://stackoverflow.com/questions/53158796/get-scroll-position-with-reactjs
-  //? to calculate the position of the carousel use https://stackoverflow.com/questions/43817118/how-to-get-the-width-of-a-react-element
-
   return (
     <S.Container>
-      <S.ImagesWrapper>
+      <S.ImagesWrapper
+        position={focused === 1 ? 0 : focused === 0 ? 500 : -500}
+      >
         {imgs.map((img, index) => (
           <S.ImageButton
             key={index}
-            position={index}
             isFocused={index === focused}
             onClick={() => handleChange(index)}
           >

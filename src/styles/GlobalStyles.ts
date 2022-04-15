@@ -1,7 +1,7 @@
 import { createGlobalStyle, css } from 'styled-components';
 
 export const GlobalStyles = createGlobalStyle`
-  ${({ theme }: { theme: typeof DefaultTheme }) => css`
+  ${({ theme: THEME }) => css`
     * {
       margin: 0;
       padding: 0;
@@ -11,7 +11,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     body {
-      background-color: ${theme.white};
+      background-color: ${THEME.white};
       font-family: 'Montserrat', sans-serif;
       overflow-x: hidden;
     }
@@ -23,13 +23,13 @@ export const GlobalStyles = createGlobalStyle`
 
     a {
       text-decoration: none;
-      color: ${theme.white};
+      color: ${THEME.white};
       text-transform: uppercase;
       letter-spacing: 1px;
       font-weight: 300;
 
       &:visited {
-        color: ${theme.gray500};
+        color: ${THEME.gray500};
       }
     }
 
@@ -39,8 +39,8 @@ export const GlobalStyles = createGlobalStyle`
 
     button {
       cursor: pointer;
-      background-color: ${theme.primary700};
-      color: ${theme.white};
+      background-color: ${THEME.primary700};
+      color: ${THEME.white};
       font-size: 14px;
       padding: 8px;
       border: 0;
@@ -56,13 +56,13 @@ export const GlobalStyles = createGlobalStyle`
       }
 
       &:focus {
-        box-shadow: 0 0 5px ${theme.primary500};
+        box-shadow: 0 0 5px ${THEME.primary500};
       }
     }
   `}
 `;
 
-export const DefaultTheme = {
+export const theme = {
   primary700: '#333D29',
   primary500: '#656D4A',
   gray700: '#777777',

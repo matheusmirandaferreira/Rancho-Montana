@@ -1,8 +1,11 @@
 import styled, { css } from 'styled-components';
 
+type ImageWrapperProps = {
+  position?: number;
+};
+
 type ImageProps = {
   isFocused?: boolean;
-  position?: number;
 };
 
 export const Container = styled.div`
@@ -21,25 +24,29 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.primary700};
 `;
 
-export const ImagesWrapper = styled.div`
+export const ImagesWrapper = styled.div<ImageWrapperProps>`
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 2rem;
+  transition: all 0.7s ease-in-out;
+
+  ${({ position }) => css`
+    transform: translateX(${position ?? 0}px);
+  `}
 `;
 
 export const ImageButton = styled.button<ImageProps>`
   background-color: #fff;
   box-shadow: 0 2px 5px ${({ theme }) => theme.primary500};
 
-  transition: all 0.2s ease-in-out;
+  transition: all 0.7s ease-in-out;
 
-  ${({ isFocused, position }) =>
+  ${({ isFocused }) =>
     isFocused
       ? css`
           width: 800px;
           height: 370px;
-          transform: translateX(${position ?? 0}px);
         `
       : css`
           width: 500px;
