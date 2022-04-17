@@ -6,14 +6,24 @@ export const GlobalStyles = createGlobalStyle`
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-size: 16px;
-      line-height: 1.5;
+      line-height: 1.6;
     }
 
     body {
-      background-color: ${THEME.white};
-      font-family: 'Montserrat', sans-serif;
+      font-size: 100%;
       overflow-x: hidden;
+      font-family: 'Montserrat', sans-serif;
+      background-color: ${THEME.white};
+
+      &::-webkit-scrollbar {
+        width: 5px;
+        border: 0;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: ${THEME.primary500};
+        border-radius: 2.5px;
+      }
     }
 
     input,
@@ -38,14 +48,22 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     button {
-      cursor: pointer;
-      background-color: ${THEME.primary700};
+      padding: 0.8rem 1rem;
+      font-size: 0.8125rem;
+
       color: ${THEME.white};
-      font-size: 14px;
-      padding: 8px;
+      background-color: ${THEME.primary700};
+
       border: 0;
       outline: 0;
+
+      cursor: pointer;
       transition: all 0.2s ease;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.8rem;
 
       &:hover {
         opacity: 0.9;
@@ -56,7 +74,7 @@ export const GlobalStyles = createGlobalStyle`
       }
 
       &:focus {
-        box-shadow: 0 0 5px ${THEME.primary500};
+        box-shadow: 0 0 12px ${THEME.primary500};
       }
     }
   `}
@@ -67,5 +85,6 @@ export const theme = {
   primary500: '#656D4A',
   gray700: '#777777',
   gray500: '#C4C4C4',
+  gray100: '#EDEDED',
   white: '#FFFFFF',
 };

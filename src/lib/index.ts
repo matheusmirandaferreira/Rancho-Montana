@@ -1,1 +1,3 @@
-export type Props = {};
+export type ContentWrapperProps = {
+  custonBackground?: 'white' | 'gray';
+};
