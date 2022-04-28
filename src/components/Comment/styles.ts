@@ -5,7 +5,7 @@ export const Container = styled.div`
   align-items: center;
   flex-direction: column;
   justify-content: space-between;
-  gap: 1rem;
+  gap: 1.4rem;
 
   .profile {
     width: 80px;
@@ -29,10 +29,11 @@ export const Container = styled.div`
   .comment {
     color: ${({ theme }) => theme.primary500};
     text-align: center;
+    max-width: 38rem;
   }
 
   .user-name {
-    color: ${({ theme }) => theme.primary700};
+    color: ${({ theme }) => theme.primary500};
     text-transform: uppercase;
     text-align: center;
   }

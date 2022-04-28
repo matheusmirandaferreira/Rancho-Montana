@@ -16,7 +16,7 @@ export function Comment({ comment, img, name }: Props) {
       </div>
 
       <div className="comment">
-        <span>{comment}</span>
+        <span>{`"${comment}"`}</span>
       </div>
 
       <div className="user-name">

@@ -11,3 +11,13 @@ export const ComeVisit = styled.div`
     }
   }
 `;
+
+export const CommentsWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+
+  margin: 2rem auto;
+  max-width: 1018px;
+`;
