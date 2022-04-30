@@ -27,8 +27,12 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     input,
+    textarea,
     button {
       font-family: 'Montserrat', sans-serif;
+      &::placeholder {
+        font-weight: 200;
+      }
     }
 
     a {
@@ -48,7 +52,7 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     button {
-      padding: 0.8rem 1rem;
+      padding: 0.8rem 1.6rem;
       font-size: 0.8125rem;
 
       color: ${THEME.white};
@@ -58,7 +62,7 @@ export const GlobalStyles = createGlobalStyle`
       outline: 0;
 
       cursor: pointer;
-      transition: all 0.2s ease;
+      transition: all 0.2s ease-in-out;
 
       display: flex;
       align-items: center;
@@ -70,7 +74,7 @@ export const GlobalStyles = createGlobalStyle`
       }
 
       &:active {
-        transform: scale(0.98);
+        filter: brightness(0.9);
       }
 
       &:focus {

@@ -21,3 +21,19 @@ export const CommentsWrapper = styled.div`
   margin: 2rem auto;
   max-width: 1018px;
 `;
+
+export const FormWrapper = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 2rem;
+
+  form {
+    width: 48%;
+  }
+
+  img {
+    max-width: 48%;
+  }
+`;

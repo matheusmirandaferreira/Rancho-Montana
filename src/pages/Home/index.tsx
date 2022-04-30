@@ -2,6 +2,7 @@ import { FaWhatsapp } from 'react-icons/fa';
 import { Header } from '../../components/Header';
 import { Carousel } from '../../components/Carousel';
 
+import ContactUsSVG from '../../assets/contact-us.svg';
 import WelcomeSVG from '../../assets/welcome.svg';
 import ComeVisitSVG from '../../assets/come-visit.svg';
 import { HomeContent } from '../../components/HomeContent';
@@ -12,6 +13,7 @@ import { Title } from '../../components/Title';
 import { Comment } from '../../components/Comment';
 import { Description } from '../../components/Description';
 import { Input } from '../../components/Input';
+import { Footer } from '../../components/Footer';
 
 export function Home() {
   const handleClick = () => {
@@ -24,7 +26,7 @@ export function Home() {
       <Carousel imgs={Array.from({ length: 3 })} />
       <HomeContent
         content="Ficamos muito felizes em te receber aqui, esperamos que goste dessa experiência e que possa aproveitar nosso site.
-        Marque uma visita para nos conhecer melhor, temos horários disponíveis em todos os dias da semana, é simple e gratuito."
+        Marque uma visita para nos conhecer melhor, temos horários disponíveis, é simples e gratuito."
         img={WelcomeSVG}
         title="Seja bem-vindo"
       />
@@ -51,7 +53,7 @@ export function Home() {
         <S.CommentsWrapper>
           <Comment
             comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus nunc at neque ullamcorper, in bibendum tellus sollicitudin. Nunc at est lobortis, egestas velit vitae, tincidunt nibh. Vestibulum fringilla egestas commodo."
-            name="Luiz Fernando Tadei"
+            name="Luis Fernando Tadei"
             img={undefined}
           />
           <Comment
@@ -68,13 +70,27 @@ export function Home() {
             Ficou com alguma duvida ou curioso sobre algo? Nos mande uma
             mensagem preenchendo o formulário abaixo
           </Description>
-          <form>
-            <Input label="Nome" name="name" />
-            <Input label="E-mail" name="email" />
-            <Input label="Mensagem" name="description" />
-          </form>
+          <S.FormWrapper>
+            <form>
+              <Input label="Nome" name="name" placeholder="Informe seu nome" />
+              <Input
+                label="E-mail"
+                name="email"
+                placeholder="Informe seu e-mail"
+              />
+              <Input
+                label="Mensagem"
+                name="description"
+                boxType="textarea"
+                placeholder="Escreva aqui seu comentário"
+              />
+              <button type="button">Enviar</button>
+            </form>
+            <img src={ContactUsSVG} />
+          </S.FormWrapper>
         </div>
       </ContentWrapper>
+      <Footer />
     </>
   );
 }
