@@ -9,6 +9,10 @@ export const GlobalStyles = createGlobalStyle`
       line-height: 1.6;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       font-size: 100%;
       overflow-x: hidden;
