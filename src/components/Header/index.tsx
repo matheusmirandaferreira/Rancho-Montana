@@ -5,13 +5,13 @@ export function Header() {
     <S.Container>
       <ul>
         <li>
-          <a href="">Home</a>
+          <a href="/">Home</a>
         </li>
         <li>
-          <a href="">Cavalos</a>
+          <a href="/horses">Cavalos</a>
         </li>
         <li>
-          <a href="">Responsáveis</a>
+          <a href="/responsible">Responsáveis</a>
         </li>
       </ul>
     </S.Container>

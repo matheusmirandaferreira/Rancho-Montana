@@ -17,7 +17,7 @@ export const GlobalStyles = createGlobalStyle`
       font-size: 100%;
       overflow-x: hidden;
       font-family: 'Montserrat', sans-serif;
-      background-color: ${THEME.white};
+      background-color: ${THEME.background};
 
       &::-webkit-scrollbar {
         width: 5px;
@@ -56,21 +56,23 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     button {
-      padding: 0.8rem 1.6rem;
-      font-size: 0.8125rem;
+      padding: 0.6rem 1.2rem;
+      font-size: 0.875rem;
+      text-align: center;
 
       color: ${THEME.white};
       background-color: ${THEME.primary700};
 
       border: 0;
       outline: 0;
+      border-radius: 0.2rem;
 
       cursor: pointer;
       transition: all 0.2s ease-in-out;
 
       display: flex;
       align-items: center;
-      justify-content: space-between;
+      justify-content: center;
       gap: 0.8rem;
 
       &:hover {
@@ -94,5 +96,6 @@ export const theme = {
   gray700: '#777777',
   gray500: '#C4C4C4',
   gray100: '#EDEDED',
+  background: '#F4F4F4',
   white: '#FFFFFF',
 };

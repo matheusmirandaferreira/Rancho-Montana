@@ -7,7 +7,7 @@ export const ContentWrapper = styled.div<ContentWrapperProps>`
 
   ${({ theme, custonBackground = 'white' }) => css`
     background-color: ${theme[
-      custonBackground === 'white' ? 'white' : 'gray100'
+      custonBackground === 'white' ? 'background' : 'gray100'
     ]};
   `}
 

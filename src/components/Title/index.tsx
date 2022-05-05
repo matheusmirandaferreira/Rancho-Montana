@@ -1,8 +1,11 @@
 import styled, { css } from 'styled-components';
 
-export const Title = styled.h2`
+type Props = {
+  removeItalic?: boolean;
+};
+
+export const Title = styled.h2<Props>`
   font-size: 1.6rem;
-  font-style: italic;
   font-weight: 400;
 
   text-align: center;
@@ -10,7 +13,8 @@ export const Title = styled.h2`
 
   margin: 1rem 0;
 
-  ${({ theme }) => css`
-    color: ${theme.primary500};
+  ${({ theme, removeItalic }) => css`
+    font-style: ${removeItalic ? 'normal' : 'italic'};
+    color: ${theme.primary700};
   `}
 `;
