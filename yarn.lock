@@ -347,6 +347,11 @@
   dependencies:
     esbuild "^0.14.14"
 
+"@react-pdf-viewer/core@3.3.2":
+  version "3.3.2"
+  resolved "https://registry.yarnpkg.com/@react-pdf-viewer/core/-/core-3.3.2.tgz#56749264c3f8f5d3fa4b9c8560b52f8143b84d13"
+  integrity sha512-hRbYCKP6m5KzH9EKf0HKYgK6v0GUM9h5dnF9XX009u/BvK2GLzarQHu+gJwN4KvtJK4ajfphxhKeZN4DnWoFYQ==
+
 "@rollup/pluginutils@^4.1.2":
   version "4.2.0"
   resolved "https://registry.npmjs.org/@rollup/pluginutils/-/pluginutils-4.2.0.tgz"
@@ -1654,6 +1659,13 @@ path-type@^4.0.0:
   resolved "https://registry.npmjs.org/path-type/-/path-type-4.0.0.tgz"
   integrity sha512-gDKb8aZMDeD/tZWs9P6+q0J9Mwkdl6xMV8TjnGP3qJVJ06bdMgkbBlLU8IdfOsIsFz2BW1rNVT3XuNEl8zPAvw==
 
+pdfjs-dist@2.13.216:
+  version "2.13.216"
+  resolved "https://registry.yarnpkg.com/pdfjs-dist/-/pdfjs-dist-2.13.216.tgz#251a11c9c8c6db19baacd833a4e6986c517d1ab3"
+  integrity sha512-qn/9a/3IHIKZarTK6ajeeFXBkG15Lg1Fx99PxU09PAU2i874X8mTcHJYyDJxu7WDfNhV6hM7bRQBZU384anoqQ==
+  dependencies:
+    web-streams-polyfill "^3.2.0"
+
 picocolors@^1.0.0:
   version "1.0.0"
   resolved "https://registry.npmjs.org/picocolors/-/picocolors-1.0.0.tgz"
@@ -2050,6 +2062,11 @@ vite@^2.8.0:
     rollup "^2.59.0"
   optionalDependencies:
     fsevents "~2.3.2"
+
+web-streams-polyfill@^3.2.0:
+  version "3.2.1"
+  resolved "https://registry.yarnpkg.com/web-streams-polyfill/-/web-streams-polyfill-3.2.1.tgz#71c2718c52b45fd49dbeee88634b3a60ceab42a6"
+  integrity sha512-e0MO3wdXWKrLbL0DgGnUV7WHVuw9OUvL4hjgnPkIeEvESk74gAITi5G606JtZPp39cd8HA9VQzCIvA49LpPN5Q==
 
 which-boxed-primitive@^1.0.2:
   version "1.0.2"

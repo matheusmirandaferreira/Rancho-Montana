@@ -10,12 +10,6 @@ export const Container = styled.div`
 
     .carousel {
       width: 45%;
-
-      img {
-        width: 100%;
-        height: 300px;
-        border-radius: 0.5rem;
-      }
     }
 
     .infos {
@@ -42,7 +36,36 @@ export const Container = styled.div`
       }
 
       .documents {
-        margin: 1rem;
+        margin: 1rem 0;
+      }
+
+      .documents-download-group {
+        margin: 1rem 0;
+        display: flex;
+        gap: 1rem;
+
+        button {
+          background: linear-gradient(
+            133.39deg,
+            #ededed 2.66%,
+            rgba(196, 196, 196, 0) 100%,
+            #e2e2e2 100%
+          );
+          color: ${theme.primary500};
+
+          &:hover {
+            filter: brightness(0.9);
+          }
+
+          &:focus,
+          &:active {
+            box-shadow: 0 0 0.5rem #ededed;
+          }
+        }
+      }
+
+      .click-to-call {
+        margin: 1rem 0;
       }
     }
   `}

@@ -16,7 +16,7 @@ export function HorseCard({
   const handleNavigate = (id: string) => navigate('/horses/' + id);
 
   return (
-    <S.Container>
+    <S.Container onClick={() => handleNavigate(uuid)}>
       <header className="header">
         <img src={img} />
       </header>
@@ -37,7 +37,7 @@ export function HorseCard({
             <span className="value">{walkingStyle}</span>
           </div>
         </div>
-        <button onClick={() => handleNavigate(uuid)}>Saiba mais</button>
+        <button>Saiba mais</button>
       </div>
     </S.Container>
   );

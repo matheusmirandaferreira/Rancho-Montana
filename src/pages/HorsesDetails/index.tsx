@@ -1,6 +1,11 @@
+import { BsCloudDownload } from 'react-icons/bs';
 import { useParams } from 'react-router-dom';
 import { ContentWrapper } from '../../components/ContentWrapper';
+import { HorsesDetailsCarousel } from '../../components/HorsesDetailsCarousel';
+import { Viewer, Worker } from '@react-pdf-viewer/core';
 import * as S from './styles';
+
+import '@react-pdf-viewer/core/lib/styles/index.css';
 
 export function HorsesDetails() {
   const { id } = useParams();
@@ -12,9 +17,9 @@ export function HorsesDetails() {
       color: 'Castanho',
       imgs: [
         'https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg',
+        'https://t.ctcdn.com.br/AthW2lYFuEnGURVf4_0FtODm-L8=/720x405/smart/filters:format(webp)/i257652.jpeg',
         'https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg',
-        'https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg',
-        'https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg',
+        'https://t.ctcdn.com.br/AthW2lYFuEnGURVf4_0FtODm-L8=/720x405/smart/filters:format(webp)/i257652.jpeg',
       ],
       name: 'Tornado',
       walkingStyle: 'Marcha picada',
@@ -22,6 +27,16 @@ export function HorsesDetails() {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus nunc at neque ullamcorper.',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus nunc at neque ullamcorper, in bibendum tellus sollicitudin. Nunc at est lobortis, egestas velit vitae, tincidunt nibh. Vestibulum fringilla egestas commodo.',
+      documents: [
+        {
+          name: 'Certidão',
+          link: 'https://www.google.com',
+        },
+        {
+          name: 'Documento',
+          link: 'https://www.google.com',
+        },
+      ],
     },
     {
       uuid: '1234-123412-12341-qrnbvc',
@@ -30,9 +45,9 @@ export function HorsesDetails() {
       color: 'Castanho',
       imgs: [
         'https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg',
+        'https://t.ctcdn.com.br/AthW2lYFuEnGURVf4_0FtODm-L8=/720x405/smart/filters:format(webp)/i257652.jpeg',
         'https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg',
-        'https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg',
-        'https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg',
+        'https://t.ctcdn.com.br/AthW2lYFuEnGURVf4_0FtODm-L8=/720x405/smart/filters:format(webp)/i257652.jpeg',
       ],
       name: 'Tornado',
       walkingStyle: 'Marcha picada',
@@ -40,6 +55,16 @@ export function HorsesDetails() {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus nunc at neque ullamcorper.',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus nunc at neque ullamcorper, in bibendum tellus sollicitudin. Nunc at est lobortis, egestas velit vitae, tincidunt nibh. Vestibulum fringilla egestas commodo.',
+      documents: [
+        {
+          name: 'Certidão',
+          link: 'https://www.google.com',
+        },
+        {
+          name: 'Documento',
+          link: 'https://www.google.com',
+        },
+      ],
     },
     {
       uuid: '1234-123412-12341-ççvxkj',
@@ -48,9 +73,9 @@ export function HorsesDetails() {
       color: 'Castanho',
       imgs: [
         'https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg',
+        'https://t.ctcdn.com.br/AthW2lYFuEnGURVf4_0FtODm-L8=/720x405/smart/filters:format(webp)/i257652.jpeg',
         'https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg',
-        'https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg',
-        'https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg',
+        'https://t.ctcdn.com.br/AthW2lYFuEnGURVf4_0FtODm-L8=/720x405/smart/filters:format(webp)/i257652.jpeg',
       ],
       name: 'Tornado',
       walkingStyle: 'Marcha picada',
@@ -58,6 +83,16 @@ export function HorsesDetails() {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus nunc at neque ullamcorper.',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus nunc at neque ullamcorper, in bibendum tellus sollicitudin. Nunc at est lobortis, egestas velit vitae, tincidunt nibh. Vestibulum fringilla egestas commodo.',
+      documents: [
+        {
+          name: 'Certidão',
+          link: 'https://www.google.com',
+        },
+        {
+          name: 'Documento',
+          link: 'https://www.google.com',
+        },
+      ],
     },
     {
       uuid: '1234-123412-12341-uiygbo',
@@ -66,9 +101,9 @@ export function HorsesDetails() {
       color: 'Castanho',
       imgs: [
         'https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg',
+        'https://t.ctcdn.com.br/AthW2lYFuEnGURVf4_0FtODm-L8=/720x405/smart/filters:format(webp)/i257652.jpeg',
         'https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg',
-        'https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg',
-        'https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg',
+        'https://t.ctcdn.com.br/AthW2lYFuEnGURVf4_0FtODm-L8=/720x405/smart/filters:format(webp)/i257652.jpeg',
       ],
       name: 'Tornado',
       walkingStyle: 'Marcha picada',
@@ -76,6 +111,16 @@ export function HorsesDetails() {
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus nunc at neque ullamcorper.',
       description:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus nunc at neque ullamcorper, in bibendum tellus sollicitudin. Nunc at est lobortis, egestas velit vitae, tincidunt nibh. Vestibulum fringilla egestas commodo.',
+      documents: [
+        {
+          name: 'Certidão',
+          link: 'https://www.google.com',
+        },
+        {
+          name: 'Documento',
+          link: 'https://www.google.com',
+        },
+      ],
     },
   ];
 
@@ -87,7 +132,7 @@ export function HorsesDetails() {
         {selectedHorse && (
           <S.Container>
             <div className="carousel">
-              <img src={selectedHorse.imgs[0]} />
+              <HorsesDetailsCarousel imgs={selectedHorse.imgs} />
             </div>
             <div className="infos">
               <div className="title">{selectedHorse.name}</div>
@@ -96,10 +141,22 @@ export function HorsesDetails() {
               </div>
               <div className="preview">{selectedHorse.preview}</div>
               <div className="preview">{selectedHorse.description}</div>
-              <div className="title">Documentos</div>
+              <div className="title documents">Documentos</div>
+              <div className="documents-download-group">
+                {selectedHorse.documents.map((item) => (
+                  <button key={item.name}>
+                    {item.name}
+                    <BsCloudDownload size={24} />
+                  </button>
+                ))}
+              </div>
+              <button className="click-to-call">Tenho interesse</button>
             </div>
           </S.Container>
         )}
+        {/* <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.13.216/build/pdf.worker.min.js">
+          <Viewer fileUrl={''} />;
+        </Worker> */}
       </div>
     </ContentWrapper>
   );

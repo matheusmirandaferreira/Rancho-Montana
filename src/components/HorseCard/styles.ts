@@ -3,6 +3,7 @@ import styled, { css } from 'styled-components';
 export const Container = styled.div`
   ${({ theme }) => css`
     width: 350px;
+    cursor: pointer;
 
     padding: 0.8rem;
     border-radius: 0.4rem;

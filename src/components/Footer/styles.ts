@@ -8,7 +8,7 @@ export const Container = styled.div`
   .content {
     margin: 0 auto;
     max-width: 1280px;
-    padding: 2rem 0;
+    padding: 2rem;
 
     .links {
       display: flex;
