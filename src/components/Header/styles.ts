@@ -18,6 +18,10 @@ export const Container = styled.header`
 
     li {
       color: ${({ theme }) => theme.white};
+
+      a.active {
+        font-weight: 800;
+      }
     }
   }
 `;

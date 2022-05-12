@@ -1,4 +1,5 @@
 import { HorseCardProps } from '../../lib';
+import { useNavigate } from 'react-router-dom';
 import * as S from './styles';
 
 export function HorseCard({
@@ -8,7 +9,12 @@ export function HorseCard({
   img,
   name,
   walkingStyle,
-}: Omit<HorseCardProps, 'uuid'>) {
+  uuid,
+}: HorseCardProps) {
+  const navigate = useNavigate();
+
+  const handleNavigate = (id: string) => navigate('/horses/' + id);
+
   return (
     <S.Container>
       <header className="header">
@@ -31,7 +37,7 @@ export function HorseCard({
             <span className="value">{walkingStyle}</span>
           </div>
         </div>
-        <button>Saiba mais</button>
+        <button onClick={() => handleNavigate(uuid)}>Saiba mais</button>
       </div>
     </S.Container>
   );

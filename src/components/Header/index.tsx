@@ -5,13 +5,30 @@ export function Header() {
     <S.Container>
       <ul>
         <li>
-          <a href="/">Home</a>
+          <a
+            className={`${window.location.pathname === '/' && 'active'}`}
+            href="/"
+          >
+            Home
+          </a>
         </li>
         <li>
-          <a href="/horses">Cavalos</a>
+          <a
+            className={`${window.location.pathname === '/horses' && 'active'}`}
+            href="/horses"
+          >
+            Cavalos
+          </a>
         </li>
         <li>
-          <a href="/responsible">Responsáveis</a>
+          <a
+            className={`${
+              window.location.pathname === '/responsible' && 'active'
+            }`}
+            href="/responsible"
+          >
+            Responsáveis
+          </a>
         </li>
       </ul>
     </S.Container>

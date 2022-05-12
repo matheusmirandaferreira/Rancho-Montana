@@ -5,7 +5,7 @@ type Props = {
 };
 
 export const Title = styled.h2<Props>`
-  font-size: 1.6rem;
+  font-size: 1.5rem;
   font-weight: 400;
 
   text-align: center;
