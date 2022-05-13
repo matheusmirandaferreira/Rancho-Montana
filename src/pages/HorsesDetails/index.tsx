@@ -2,10 +2,7 @@ import { BsCloudDownload } from 'react-icons/bs';
 import { useParams } from 'react-router-dom';
 import { ContentWrapper } from '../../components/ContentWrapper';
 import { HorsesDetailsCarousel } from '../../components/HorsesDetailsCarousel';
-import { Viewer, Worker } from '@react-pdf-viewer/core';
 import * as S from './styles';
-
-import '@react-pdf-viewer/core/lib/styles/index.css';
 
 export function HorsesDetails() {
   const { id } = useParams();
@@ -139,7 +136,6 @@ export function HorsesDetails() {
               <div className="birth-date">
                 Nascimento em {selectedHorse.birthDate}
               </div>
-              <div className="preview">{selectedHorse.preview}</div>
               <div className="preview">{selectedHorse.description}</div>
               <div className="title documents">Documentos</div>
               <div className="documents-download-group">
@@ -150,13 +146,9 @@ export function HorsesDetails() {
                   </button>
                 ))}
               </div>
-              <button className="click-to-call">Tenho interesse</button>
             </div>
           </S.Container>
         )}
-        {/* <Worker workerUrl="https://unpkg.com/pdfjs-dist@2.13.216/build/pdf.worker.min.js">
-          <Viewer fileUrl={''} />;
-        </Worker> */}
       </div>
     </ContentWrapper>
   );

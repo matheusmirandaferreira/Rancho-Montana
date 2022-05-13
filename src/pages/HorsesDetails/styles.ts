@@ -23,8 +23,8 @@ export const Container = styled.div`
 
       .birth-date {
         margin: 1rem 0;
+        font-size: 1rem;
         color: ${theme.primary500};
-        font-size: 0.75rem;
       }
 
       .preview {
@@ -62,10 +62,6 @@ export const Container = styled.div`
             box-shadow: 0 0 0.5rem #ededed;
           }
         }
-      }
-
-      .click-to-call {
-        margin: 1rem 0;
       }
     }
   `}

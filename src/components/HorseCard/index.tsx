@@ -1,6 +1,7 @@
 import { HorseCardProps } from '../../lib';
 import { useNavigate } from 'react-router-dom';
 import * as S from './styles';
+import { Card } from '../Card';
 
 export function HorseCard({
   birthDate,
@@ -16,29 +17,26 @@ export function HorseCard({
   const handleNavigate = (id: string) => navigate('/horses/' + id);
 
   return (
-    <S.Container onClick={() => handleNavigate(uuid)}>
-      <header className="header">
-        <img src={img} />
-      </header>
-      <div className="content">
-        <div className="title">{name}</div>
-        <div className="birth-date">Nascimento em {birthDate}</div>
-        <div className="infos">
-          <div className="row">
-            <span className="label">Raça</span>
-            <span className="value">{breed}</span>
-          </div>
-          <div className="row">
-            <span className="label">Cor</span>
-            <span className="value">{color}</span>
-          </div>
-          <div className="row">
-            <span className="label">Andamento</span>
-            <span className="value">{walkingStyle}</span>
-          </div>
+    <Card
+      img={img}
+      subtitle={`Nascimento em ${birthDate}`}
+      title={name}
+      onClick={() => handleNavigate(uuid)}
+    >
+      <S.Container>
+        <div className="row">
+          <span className="label">Raça</span>
+          <span className="value">{breed}</span>
         </div>
-        <button>Saiba mais</button>
-      </div>
-    </S.Container>
+        <div className="row">
+          <span className="label">Cor</span>
+          <span className="value">{color}</span>
+        </div>
+        <div className="row">
+          <span className="label">Andamento</span>
+          <span className="value">{walkingStyle}</span>
+        </div>
+      </S.Container>
+    </Card>
   );
 }

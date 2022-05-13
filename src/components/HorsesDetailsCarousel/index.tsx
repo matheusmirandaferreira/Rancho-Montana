@@ -16,7 +16,7 @@ export function HorsesDetailsCarousel({ imgs }: Props) {
       </div>
       <div className="minor-imgs-group">
         {imgs.map((item, index) => (
-          <img key={item} src={item} onClick={() => handleSelectImg(index)} />
+          <img key={index} src={item} onClick={() => handleSelectImg(index)} />
         ))}
       </div>
     </S.Container>
