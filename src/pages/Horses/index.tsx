@@ -1,8 +1,7 @@
 import { HorseCard } from '../../components/HorseCard';
 import { ContentWrapper } from '../../components/ContentWrapper';
-import { Title } from '../../components/Title';
 import { HorseCardProps } from '../../lib';
-import * as S from './styles';
+import { CardsWrapper } from '../../components/CardsWrapper';
 
 export function Horses() {
   const horses: HorseCardProps[] = [
@@ -45,17 +44,16 @@ export function Horses() {
   ];
 
   return (
-    <S.Container>
-      <Title removeItalic>Nossos Cavalos</Title>
-      <ContentWrapper>
-        <div className="content">
-          <div className="horses">
+    <ContentWrapper>
+      <div className="content">
+        <CardsWrapper title="Nossos Cavalos">
+          <div className="cards">
             {horses.map((horse) => (
               <HorseCard key={horse.uuid} {...horse} />
             ))}
           </div>
-        </div>
-      </ContentWrapper>
-    </S.Container>
+        </CardsWrapper>
+      </div>
+    </ContentWrapper>
   );
 }

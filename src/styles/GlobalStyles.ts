@@ -19,6 +19,8 @@ export const GlobalStyles = createGlobalStyle`
       font-family: 'Montserrat', sans-serif;
       background-color: ${THEME.background};
 
+      height: 100vh;
+
       &::-webkit-scrollbar {
         width: 5px;
         border: 0;
@@ -86,6 +88,12 @@ export const GlobalStyles = createGlobalStyle`
       &:focus {
         box-shadow: 0 0 12px ${THEME.primary500};
       }
+    }
+
+    #root {
+      height: 100%;
+      display: flex;
+      flex-direction: column;
     }
   `}
 `;

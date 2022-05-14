@@ -23,9 +23,9 @@ export function Header() {
         <li>
           <a
             className={`${
-              window.location.pathname === '/responsible' && 'active'
+              window.location.pathname === '/responsibles' && 'active'
             }`}
-            href="/responsible"
+            href="/responsibles"
           >
             Responsáveis
           </a>

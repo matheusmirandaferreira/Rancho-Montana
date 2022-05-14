@@ -45,19 +45,21 @@ export function Home() {
 
       <Element name="comments">
         <ContentWrapper>
-          <Title>Comentários de clientes</Title>
-          <S.CommentsWrapper>
-            <Comment
-              comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus nunc at neque ullamcorper, in bibendum tellus sollicitudin. Nunc at est lobortis, egestas velit vitae, tincidunt nibh. Vestibulum fringilla egestas commodo."
-              name="Luis Fernando Tadei"
-              img={undefined}
-            />
-            <Comment
-              comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus nunc at neque ullamcorper, in bibendum tellus sollicitudin. Nunc at est lobortis, egestas velit vitae, tincidunt nibh. Vestibulum fringilla egestas commodo."
-              name="Matheus de Miranda Ferreira"
-              img={undefined}
-            />
-          </S.CommentsWrapper>
+          <div className="content">
+            <Title>Comentários de clientes</Title>
+            <S.CommentsWrapper>
+              <Comment
+                comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus nunc at neque ullamcorper, in bibendum tellus sollicitudin. Nunc at est lobortis, egestas velit vitae, tincidunt nibh. Vestibulum fringilla egestas commodo."
+                name="Luis Fernando Tadei"
+                img={undefined}
+              />
+              <Comment
+                comment="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque tempus nunc at neque ullamcorper, in bibendum tellus sollicitudin. Nunc at est lobortis, egestas velit vitae, tincidunt nibh. Vestibulum fringilla egestas commodo."
+                name="Matheus de Miranda Ferreira"
+                img={undefined}
+              />
+            </S.CommentsWrapper>
+          </div>
         </ContentWrapper>
       </Element>
 

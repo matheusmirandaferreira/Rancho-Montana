@@ -30,6 +30,7 @@ export const ImagesWrapper = styled.div<ImageWrapperProps>`
   justify-content: space-between;
   gap: 2rem;
   transition: all 0.7s ease-in-out;
+  height: 370px;
 
   ${({ position }) => css`
     transform: translateX(${position ?? 0}px);
