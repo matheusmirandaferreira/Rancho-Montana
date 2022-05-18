@@ -1,34 +1,43 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import * as S from './styles';
 
 export function Header() {
+  const [route, setRoute] = useState('/');
+
+  const handleRoute = (route: string) => {
+    setRoute(route);
+  };
+
   return (
     <S.Container>
       <ul>
         <li>
-          <a
-            className={`${window.location.pathname === '/' && 'active'}`}
-            href="/"
+          <Link
+            onClick={() => handleRoute('/')}
+            to="/"
+            className={`${route === '/' && 'active'}`}
           >
             Home
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            className={`${window.location.pathname === '/horses' && 'active'}`}
-            href="/horses"
+          <Link
+            onClick={() => handleRoute('/horses')}
+            className={`${route === '/horses' && 'active'}`}
+            to="/horses"
           >
             Cavalos
-          </a>
+          </Link>
         </li>
         <li>
-          <a
-            className={`${
-              window.location.pathname === '/responsibles' && 'active'
-            }`}
-            href="/responsibles"
+          <Link
+            onClick={() => handleRoute('/responsibles')}
+            className={`${route === '/responsibles' && 'active'}`}
+            to="/responsibles"
           >
             Responsáveis
-          </a>
+          </Link>
         </li>
       </ul>
     </S.Container>

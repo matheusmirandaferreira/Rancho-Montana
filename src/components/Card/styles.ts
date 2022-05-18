@@ -23,7 +23,7 @@ export const Container = styled.div`
     }
 
     .content {
-      padding-top: 0.8rem;
+      padding: 0.8rem 0 0 0;
 
       .title {
         font-size: 1.125rem;
@@ -35,7 +35,7 @@ export const Container = styled.div`
       .birth-date {
         text-align: center;
         color: ${theme.primary500};
-        font-size: 0.75rem;
+        font-size: 0.875rem;
       }
 
       button {

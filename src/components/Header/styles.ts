@@ -1,4 +1,14 @@
-import styled from 'styled-components';
+import styled, { keyframes } from 'styled-components';
+import { theme } from '../../styles/GlobalStyles';
+
+const slideIn = keyframes`
+  from {
+    width: 0;
+  } 
+  to {
+    width: 100%;
+  }
+`;
 
 export const Container = styled.header`
   display: flex;
@@ -18,9 +28,25 @@ export const Container = styled.header`
 
     li {
       color: ${({ theme }) => theme.white};
+      position: relative;
+      text-align: center;
 
       a.active {
-        font-weight: 800;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        &::after {
+          content: '';
+
+          position: relative;
+
+          height: 1px;
+          background-color: ${theme.background};
+
+          animation: ${slideIn} 1s ease forwards;
+        }
       }
     }
   }
