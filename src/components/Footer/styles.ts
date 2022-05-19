@@ -21,7 +21,6 @@ export const Container = styled.div`
         span {
           display: block;
           margin-bottom: 0.8rem;
-          text-decoration: underline;
         }
 
         ul li a {

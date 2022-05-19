@@ -1,30 +1,20 @@
-import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import * as S from './styles';
 
 export function Header() {
-  const [route, setRoute] = useState('/');
-
-  const handleRoute = (route: string) => {
-    setRoute(route);
-  };
+  const { pathname } = useLocation();
 
   return (
     <S.Container>
       <ul>
         <li>
-          <Link
-            onClick={() => handleRoute('/')}
-            to="/"
-            className={`${route === '/' && 'active'}`}
-          >
+          <Link to="/" className={`${pathname === '/' && 'active'}`}>
             Home
           </Link>
         </li>
         <li>
           <Link
-            onClick={() => handleRoute('/horses')}
-            className={`${route === '/horses' && 'active'}`}
+            className={`${pathname === '/horses' && 'active'}`}
             to="/horses"
           >
             Cavalos
@@ -32,8 +22,7 @@ export function Header() {
         </li>
         <li>
           <Link
-            onClick={() => handleRoute('/responsibles')}
-            className={`${route === '/responsibles' && 'active'}`}
+            className={`${pathname === '/responsibles' && 'active'}`}
             to="/responsibles"
           >
             Responsáveis

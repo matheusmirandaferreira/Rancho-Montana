@@ -1,45 +1,69 @@
+import { Link } from 'react-router-dom';
+
 import * as Scroll from 'react-scroll';
 import * as S from './styles';
 
 export function Footer() {
-  const { Link } = Scroll;
+  const { Link: SCROLL_LINK } = Scroll;
+
+  const handleNavigate = () => {
+    window.scrollTo(0, 0);
+    window.dispatchEvent(new Event('popstate'));
+  };
+
   return (
     <S.Container>
       <div className="content">
         <div className="links">
           <div className="link">
-            <span>Home</span>
+            <span>
+              <Link onClick={handleNavigate} to="/">
+                Home
+              </Link>
+            </span>
             <ul>
               <li>
-                <Link to="welcome" smooth={true} duration={200}>
+                <SCROLL_LINK to="welcome" smooth={true} duration={200}>
                   Seja Bem-Vindo
-                </Link>
+                </SCROLL_LINK>
               </li>
               <li>
-                <Link to="visit-us" smooth={true} duration={200}>
+                <SCROLL_LINK to="visit-us" smooth={true} duration={200}>
                   Venha nos Visitar
-                </Link>
+                </SCROLL_LINK>
               </li>
               <li>
-                <Link to="comments" smooth={true} duration={200}>
+                <SCROLL_LINK to="comments" smooth={true} duration={200}>
                   Comentários
-                </Link>
+                </SCROLL_LINK>
               </li>
               <li>
-                <Link to="contact-us" smooth={true} duration={200}>
+                <SCROLL_LINK to="contact-us" smooth={true} duration={200}>
                   Fale Conosco
-                </Link>
+                </SCROLL_LINK>
               </li>
             </ul>
           </div>
           <div className="link">
-            <span>Cavalos</span>
+            <span>
+              <Link onClick={handleNavigate} to="horses">
+                Cavalos
+              </Link>
+            </span>
           </div>
           <div className="link">
-            <span>Responsáveis</span>
+            <span>
+              <Link onClick={handleNavigate} to="responsibles">
+                Responsáveis
+              </Link>
+            </span>
           </div>
           <div className="link">
-            <span>Contato</span>
+            <span>
+              <Link onClick={handleNavigate} to="contact-us">
+                Contato
+              </Link>
+            </span>
           </div>
         </div>
       </div>
