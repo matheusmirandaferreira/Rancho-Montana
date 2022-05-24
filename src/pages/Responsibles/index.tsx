@@ -1,3 +1,4 @@
+import { useNavigate } from 'react-router-dom';
 import { Card } from '../../components/Card';
 import { CardsWrapper } from '../../components/CardsWrapper';
 import { ContentWrapper } from '../../components/ContentWrapper';
@@ -35,6 +36,10 @@ export function Responsibles() {
     },
   ];
 
+  const navigate = useNavigate();
+
+  const handleNavigate = (id: string) => navigate('/responsibles/' + id);
+
   return (
     <ContentWrapper>
       <div className="content">
@@ -46,6 +51,7 @@ export function Responsibles() {
                 img={responsible.img}
                 subtitle={`${responsible.age} anos`}
                 title={responsible.name}
+                onClick={() => handleNavigate(responsible.uuid)}
               >
                 <S.CardInfos>{responsible.description}</S.CardInfos>
               </Card>
