@@ -1,20 +1,31 @@
+import { useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import * as Scroll from 'react-scroll';
 import { Carousel } from '../../components/Carousel';
+import { Comment } from '../../components/Comment';
+import { ContentWrapper } from '../../components/ContentWrapper';
+import { Description } from '../../components/Description';
+import { HomeContent } from '../../components/HomeContent';
+import { Input } from '../../components/Input';
+import { Title } from '../../components/Title';
 
-import ContactUsSVG from '../../assets/contact-us.svg';
 import WelcomeSVG from '../../assets/welcome.svg';
 import ComeVisitSVG from '../../assets/come-visit.svg';
-import { HomeContent } from '../../components/HomeContent';
-
+import ContactUsSVG from '../../assets/contact-us.svg';
 import * as S from './styles';
-import { ContentWrapper } from '../../components/ContentWrapper';
-import { Title } from '../../components/Title';
-import { Comment } from '../../components/Comment';
-import { Description } from '../../components/Description';
-import { Input } from '../../components/Input';
 
 export function Home() {
-  const { Element } = Scroll;
+  const { Element, scroller } = Scroll;
+
+  const { hash } = useLocation();
+
+  useEffect(() => {
+    if (hash) {
+      scroller.scrollTo(hash.slice(1), {});
+    } else {
+      window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }
+  }, [hash]);
 
   return (
     <>

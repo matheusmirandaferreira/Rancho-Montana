@@ -28,6 +28,14 @@ export function Header() {
             Responsáveis
           </Link>
         </li>
+        <li>
+          <Link
+            className={`${pathname === '/contact-us' && 'active'}`}
+            to="/contact-us"
+          >
+            Contato
+          </Link>
+        </li>
       </ul>
     </S.Container>
   );

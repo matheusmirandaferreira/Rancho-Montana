@@ -6,6 +6,7 @@ import { Responsibles } from '../pages/Responsibles';
 import { ResponsibleDetails } from '../pages/ResponsibleDetails';
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer';
+import { ContactUs } from '../pages/ContactUs';
 
 export function Router() {
   return (
@@ -21,6 +22,7 @@ export function Router() {
       >
         <Route path="/" element={<Home />} />
         <Route path="/horses" element={<Horses />} />
+        <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/horses/:id" element={<HorsesDetails />} />
         <Route path="/responsibles" element={<Responsibles />} />
         <Route path="/responsibles/:id" element={<ResponsibleDetails />} />

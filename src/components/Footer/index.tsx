@@ -1,14 +1,10 @@
 import { Link } from 'react-router-dom';
 
-import * as Scroll from 'react-scroll';
 import * as S from './styles';
 
 export function Footer() {
-  const { Link: SCROLL_LINK } = Scroll;
-
   const handleNavigate = () => {
     window.scrollTo(0, 0);
-    window.dispatchEvent(new Event('popstate'));
   };
 
   return (
@@ -23,24 +19,16 @@ export function Footer() {
             </span>
             <ul>
               <li>
-                <SCROLL_LINK to="welcome" smooth={true} duration={200}>
-                  Seja Bem-Vindo
-                </SCROLL_LINK>
+                <Link to="/#welcome">Seja Bem-Vindo</Link>
               </li>
               <li>
-                <SCROLL_LINK to="visit-us" smooth={true} duration={200}>
-                  Venha nos Visitar
-                </SCROLL_LINK>
+                <Link to="/#visit-us">Venha nos Visitar</Link>
               </li>
               <li>
-                <SCROLL_LINK to="comments" smooth={true} duration={200}>
-                  Comentários
-                </SCROLL_LINK>
+                <Link to="/#comments">Comentários</Link>
               </li>
               <li>
-                <SCROLL_LINK to="contact-us" smooth={true} duration={200}>
-                  Fale Conosco
-                </SCROLL_LINK>
+                <Link to="/#contact-us">Fale Conosco</Link>
               </li>
             </ul>
           </div>
