@@ -15,10 +15,23 @@ export const Container = styled.div`
       width: 100%;
       height: 217px;
 
+      border-radius: 0.4rem;
+      background-color: ${theme.background};
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
       img {
         width: 100%;
         height: 100%;
         border-radius: 0.4rem;
+        object-fit: cover;
+      }
+
+      svg {
+        color: ${theme.primary500};
+        font-size: 3rem;
       }
     }
 

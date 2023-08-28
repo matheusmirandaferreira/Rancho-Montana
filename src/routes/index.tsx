@@ -24,8 +24,8 @@ export function Router() {
         <Route path="/horses" element={<Horses />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/horses/:id" element={<HorsesDetails />} />
-        <Route path="/responsibles" element={<Responsibles />} />
-        <Route path="/responsibles/:id" element={<ResponsibleDetails />} />
+        {/* <Route path="/responsibles" element={<Responsibles />} /> */}
+        {/* <Route path="/responsibles/:id" element={<ResponsibleDetails />} /> */}
         <Route
           path="*"
           element={

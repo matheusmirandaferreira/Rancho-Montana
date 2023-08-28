@@ -20,14 +20,14 @@ export function Header() {
             Cavalos
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link
             className={`${pathname === '/responsibles' && 'active'}`}
             to="/responsibles"
           >
             Responsáveis
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link
             className={`${pathname === '/contact-us' && 'active'}`}

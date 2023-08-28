@@ -32,13 +32,13 @@ export function Footer() {
               </li>
             </ul>
           </div>
-          <div className="link">
+          {/* <div className="link">
             <span>
               <Link onClick={handleNavigate} to="horses">
                 Cavalos
               </Link>
             </span>
-          </div>
+          </div> */}
           <div className="link">
             <span>
               <Link onClick={handleNavigate} to="responsibles">

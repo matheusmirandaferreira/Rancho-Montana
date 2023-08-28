@@ -1,55 +1,32 @@
 import { HorseCard } from '../../components/HorseCard';
 import { ContentWrapper } from '../../components/ContentWrapper';
-import { HorseCardProps } from '../../lib';
+import { HorseCardProps, ResponseProps } from '../../lib';
 import { CardsWrapper } from '../../components/CardsWrapper';
+import { useQuery } from '@tanstack/react-query';
+import { getHorses } from '../../services/horses';
+import { Loader } from '../../components/Loader';
 
 export function Horses() {
-  const horses: HorseCardProps[] = [
-    {
-      uuid: '1234-123412-12341-aqefdfg',
-      birthDate: '14/05/2015',
-      breed: 'Manga larga',
-      color: 'Castanho',
-      img: 'https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg',
-      name: 'Tornado',
-      walkingStyle: 'Marcha picada',
-    },
-    {
-      uuid: '1234-123412-12341-qrnbvc',
-      birthDate: '14/05/2015',
-      breed: 'Manga larga',
-      color: 'Castanho',
-      img: 'https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg',
-      name: 'Tornado',
-      walkingStyle: 'Marcha picada',
-    },
-    {
-      uuid: '1234-123412-12341-ççvxkj',
-      birthDate: '14/05/2015',
-      breed: 'Manga larga',
-      color: 'Castanho',
-      img: 'https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg',
-      name: 'Tornado',
-      walkingStyle: 'Marcha picada',
-    },
-    {
-      uuid: '1234-123412-12341-uiygbo',
-      birthDate: '14/05/2015',
-      breed: 'Manga larga',
-      color: 'Castanho',
-      img: 'https://ciclovivo.com.br/wp-content/uploads/2018/10/iStock-536613027.jpg',
-      name: 'Tornado',
-      walkingStyle: 'Marcha picada',
-    },
-  ];
+  const { isLoading, data, isError } = useQuery<
+    ResponseProps<HorseCardProps[]>
+  >({
+    queryFn: getHorses,
+    queryKey: ['HORSES_LIST'],
+  });
+
+  console.log('data.data', data);
+
+  if (isLoading) return <Loader.Page />;
+
+  if (isError) return <></>;
 
   return (
     <ContentWrapper>
       <div className="content">
         <CardsWrapper title="Nossos Cavalos">
           <div className="cards">
-            {horses.map((horse) => (
-              <HorseCard key={horse.uuid} {...horse} />
+            {data.data.map((horse, index) => (
+              <HorseCard key={index} {...horse} />
             ))}
           </div>
         </CardsWrapper>
