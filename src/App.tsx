@@ -1,7 +1,7 @@
 import { ThemeProvider } from 'styled-components';
 
 import { Router } from './routes';
-import { theme, GlobalStyles } from './styles/GlobalStyles';
+import { theme, GlobalStyles } from './global/GlobalStyles';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 
 const queryClient = new QueryClient();

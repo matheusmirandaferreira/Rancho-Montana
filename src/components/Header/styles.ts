@@ -1,5 +1,5 @@
 import styled, { keyframes } from 'styled-components';
-import { theme } from '../../styles/GlobalStyles';
+import { theme } from '../../global/GlobalStyles';
 
 const slideIn = keyframes`
   from {

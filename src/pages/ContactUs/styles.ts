@@ -11,9 +11,17 @@ export const FormWrapper = styled.div`
 
   form {
     width: 48%;
+
+    @media (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   img {
     max-width: 48%;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 `;

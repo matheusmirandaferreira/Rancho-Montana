@@ -3,17 +3,31 @@ import styled, { css } from 'styled-components';
 export const Container = styled.div`
   ${({ theme }) => css`
     max-width: 1088px;
-    display: flex;
-    gap: 2rem;
-    justify-content: space-between;
+
     margin: auto;
+
+    gap: 2rem;
+    display: flex;
+    justify-content: space-between;
+
+    @media (max-width: 500px) {
+      flex-direction: column;
+    }
 
     .carousel {
       width: 45%;
+
+      @media (max-width: 500px) {
+        width: 100%;
+      }
     }
 
     .infos {
       width: 45%;
+
+      @media (max-width: 500px) {
+        width: 100%;
+      }
 
       .title {
         text-transform: uppercase;

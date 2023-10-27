@@ -1,4 +1,3 @@
-import { BsCloudDownload } from 'react-icons/bs';
 import { useParams } from 'react-router-dom';
 import { ContentWrapper } from '../../components/ContentWrapper';
 import { HorsesDetailsCarousel } from '../../components/HorsesDetailsCarousel';
@@ -36,7 +35,8 @@ export function HorsesDetails() {
               Nascimento em {data.data.birthdate.split('-').reverse().join('/')}
             </div>
             <div className="preview">
-              {data.data.gender === 'M' ? 'Cavalo' : 'Égua'}{' '}
+              {data.data.category.nmcategory}{' '}
+              {data.data.gender === 'M' ? 'macho' : 'fêmea'}{' '}
               {data.data.race.nmrace.toLowerCase()} com pelagem{' '}
               {data.data.color.nmcolor.toLowerCase()} e de andamento{' '}
               {data.data.pace.nmpace.toLowerCase()}

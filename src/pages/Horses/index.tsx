@@ -1,20 +1,16 @@
 import { HorseCard } from '../../components/HorseCard';
 import { ContentWrapper } from '../../components/ContentWrapper';
-import { HorseCardProps, ResponseProps } from '../../lib';
+import { HorseCardProps } from '../../lib';
 import { CardsWrapper } from '../../components/CardsWrapper';
 import { useQuery } from '@tanstack/react-query';
 import { getHorses } from '../../services/horses';
 import { Loader } from '../../components/Loader';
 
 export function Horses() {
-  const { isLoading, data, isError } = useQuery<
-    ResponseProps<HorseCardProps[]>
-  >({
+  const { isLoading, data, isError } = useQuery<HorseCardProps[]>({
     queryFn: getHorses,
     queryKey: ['HORSES_LIST'],
   });
-
-  console.log('data.data', data);
 
   if (isLoading) return <Loader.Page />;
 
@@ -25,7 +21,7 @@ export function Horses() {
       <div className="content">
         <CardsWrapper title="Nossos Cavalos">
           <div className="cards">
-            {data.data.map((horse, index) => (
+            {data.map((horse, index) => (
               <HorseCard key={index} {...horse} />
             ))}
           </div>

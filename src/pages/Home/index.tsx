@@ -1,7 +1,6 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import * as Scroll from 'react-scroll';
-import { Carousel } from '../../components/Carousel';
 import { Comment } from '../../components/Comment';
 import { ContentWrapper } from '../../components/ContentWrapper';
 import { Description } from '../../components/Description';
@@ -29,7 +28,7 @@ export function Home() {
 
   return (
     <>
-      <Carousel imgs={Array.from({ length: 3 })} />
+      {/* <Carousel imgs={Array.from({ length: 3 })} /> */}
       <Element name="welcome">
         <HomeContent
           content="Ficamos muito felizes em te receber aqui, esperamos que goste dessa experiência e que possa aproveitar nosso site.

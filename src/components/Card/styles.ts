@@ -60,5 +60,9 @@ export const Container = styled.div`
         padding: 0.875rem;
       }
     }
+
+    @media (max-width: 500px) {
+      width: 100%;
+    }
   `}
 `;

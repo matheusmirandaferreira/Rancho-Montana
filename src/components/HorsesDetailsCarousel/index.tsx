@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import * as S from './styles';
+import { ImageNotSupportedOutlined } from '@mui/icons-material';
 
 type Props = {
   imgs: string[];
@@ -12,11 +13,21 @@ export function HorsesDetailsCarousel({ imgs }: Props) {
   return (
     <S.Container>
       <div className="expanded-img">
-        <img src={imgs[selectedImg]} />
+        {imgs[selectedImg] ? (
+          <img src={imgs[selectedImg]} />
+        ) : (
+          <ImageNotSupportedOutlined />
+        )}
       </div>
       <div className="minor-imgs-group">
         {imgs.map((item, index) => (
-          <img key={index} src={item} onClick={() => handleSelectImg(index)} />
+          <div className="minor-img" key={index}>
+            {item ? (
+              <img src={item} onClick={() => handleSelectImg(index)} />
+            ) : (
+              <ImageNotSupportedOutlined />
+            )}
+          </div>
         ))}
       </div>
     </S.Container>

@@ -13,7 +13,9 @@ export const Container = styled.div`
     padding: 2rem;
 
     .links {
+      gap: 1rem;
       display: flex;
+      flex-wrap: wrap;
       justify-content: space-between;
 
       .link {

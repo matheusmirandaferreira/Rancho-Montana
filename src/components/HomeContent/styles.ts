@@ -15,10 +15,19 @@ export const Content = styled.div<ContentProps>`
     font-size: 1.125rem;
     max-width: 50%;
     color: ${({ theme }) => theme.primary500};
+
+    @media (max-width: 768px) {
+      max-width: 100%;
+      text-align: center !important;
+    }
   }
 
   .img-box {
     max-width: 48%;
+
+    @media (max-width: 768px) {
+      display: none;
+    }
   }
 
   ${({ reverse }) =>
