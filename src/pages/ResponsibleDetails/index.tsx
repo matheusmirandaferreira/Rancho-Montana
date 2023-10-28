@@ -1,10 +1,10 @@
-import { BsCloudDownload } from 'react-icons/bs';
-import { useParams } from 'react-router-dom';
+// import { BsCloudDownload } from 'react-icons/bs';
+// import { useParams } from 'react-router-dom';
 import { ContentWrapper } from '../../components/ContentWrapper';
 import * as S from './styles';
 
 export function ResponsibleDetails() {
-  const { id } = useParams();
+  // const { id } = useParams();
 
   const selected = {
     name: 'Teste',
@@ -35,7 +35,7 @@ export function ResponsibleDetails() {
                 {selected.documents.map((item) => (
                   <button key={item.name}>
                     {item.name}
-                    <BsCloudDownload size={24} />
+                    {/* <BsCloudDownload size={24} /> */}
                   </button>
                 ))}
               </div>
